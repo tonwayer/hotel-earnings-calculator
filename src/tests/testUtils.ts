@@ -1,8 +1,8 @@
 import { waitFor, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-export const typeIntoInput  = async (label: string, value: string) => {
-  const input = await screen.getByLabelText(label);
+export const typeIntoInput = async (label: string, value: string) => {
+  const input = screen.getByLabelText(label);
   input.focus();
   userEvent.type(input, value);
   return waitFor(() => {

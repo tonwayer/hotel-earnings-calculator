@@ -14,10 +14,6 @@ describe("RevenueCard", () => {
 
   it("should display correct information", () => {
     renderComponent();
-    screen.getByText("€" + defaultProps.premiumRoomRevenue);
-    screen.getByText(defaultProps.economyRoomOccupancy);
-    screen.getByText("€" + defaultProps.economyRoomRevenue);
-    screen.getByText(defaultProps.economyRoomOccupancy);
     expect(screen.getByTestId("premium-revenue")).toHaveTextContent(
       "€" + defaultProps.premiumRoomRevenue
     );
