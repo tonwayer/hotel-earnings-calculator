@@ -35,15 +35,20 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Hotel Revenue Calculator</h1>
-      <AvailableRoomForm onRoomStateSubmit={onRoomStateSubmit} />
-      <RevenueCard
-        economyRoomOccupancy={economyRoomState.occupancy}
-        economyRoomRevenue={economyRoomState.revenue}
-        premiumRoomOccupancy={premiumRoomState.occupancy}
-        premiumRoomRevenue={premiumRoomState.revenue}
-      />
+    <div className="p-8">
+      <h1 className="text-3xl font-bold">Hotel Revenue Calculator</h1>
+      <div className="flex gap-3 items-center mt-10">
+        <AvailableRoomForm onRoomStateSubmit={onRoomStateSubmit} />
+        <span className="text-8xl">
+          =&gt;
+        </span>
+        <RevenueCard
+          economyRoomOccupancy={economyRoomState.occupancy}
+          economyRoomRevenue={economyRoomState.revenue}
+          premiumRoomOccupancy={premiumRoomState.occupancy}
+          premiumRoomRevenue={premiumRoomState.revenue}
+        />
+      </div>
     </div>
   );
 }
