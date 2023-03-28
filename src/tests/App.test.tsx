@@ -1,13 +1,13 @@
-import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
-import App from '../App';
-import userEvent from '@testing-library/user-event';
-import { typeIntoInput } from './testUtils';
+import React from "react";
+import { act, render, screen, waitFor } from "@testing-library/react";
+import App from "../App";
+import userEvent from "@testing-library/user-event";
+import { typeIntoInput } from "./testUtils";
 
-describe('App', () => {
+describe("App", () => {
   const renderPage = () => render(<App />);
 
-  it('renders page', () => {
+  it("renders page", () => {
     renderPage();
     screen.getByRole("heading", { name: "Hotel Revenue Calculator" });
     screen.getByRole("region", { name: "available-rooms-form" });
@@ -30,11 +30,12 @@ describe('App', () => {
       economyRevenue
     ) => {
       renderPage();
-      await typeIntoInput("Premium Rooms", premiumRooms);
-      await typeIntoInput("Economy Rooms", economyRooms);
-      userEvent.click(
-        screen.getByRole("button", { name: "Calculate Revenue" })
-      );
+      await act(async () => {
+        await typeIntoInput("Premium Rooms", premiumRooms);
+        await typeIntoInput("Economy Rooms", economyRooms);
+      });
+      const button = screen.getByRole("button", { name: "Calculate Revenue" });
+      userEvent.click(button);
       await waitFor(() => {
         expect(screen.getByTestId("premium-revenue")).toHaveTextContent(
           "€" + premiumRevenue
