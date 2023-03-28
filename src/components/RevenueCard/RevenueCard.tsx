@@ -24,13 +24,13 @@ export const RevenueCard = (props: IRevenueCardProps) => {
           <p>Premium rooms</p>
           <div className="flex justify-around text-center">
             <div className="flex flex-col">
-              <img alt="premium rooms" className="w-10" src="/premium.png" />
+              <img alt="premium rooms" className="w-10" src="./premium.png" />
               <span data-testid="premium-occupancy">
                 {premiumRoomOccupancy}
               </span>
             </div>
             <div>
-              <img alt="premium revenue" className="w-10" src="/revenue.png" />
+              <img alt="premium revenue" className="w-10" src="./revenue.png" />
               <span data-testid="premium-revenue">
                 &euro;{premiumRoomRevenue}
               </span>
@@ -41,13 +41,13 @@ export const RevenueCard = (props: IRevenueCardProps) => {
           <p>Economy rooms</p>
           <div className="flex justify-around text-center">
             <div className="flex flex-col">
-              <img alt="economy rooms" className="w-10" src="/economy.png" />
+              <img alt="economy rooms" className="w-10" src="./economy.png" />
               <span data-testid="economy-occupancy">
                 {economyRoomOccupancy}
               </span>
             </div>
             <div>
-              <img alt="economy revenue" className="w-10" src="/revenue.png" />
+              <img alt="economy revenue" className="w-10" src="./revenue.png" />
               <span data-testid="economy-revenue">
                 &euro;{economyRoomRevenue}
               </span>

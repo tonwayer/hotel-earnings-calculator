@@ -29,7 +29,7 @@ export const AvailableRoomForm = (props: IAvalableRoomFormProps) => {
           <img
             alt="free premium rooms"
             className="w-10 mr-2"
-            src="/premium.png"
+            src="./premium.png"
           />
           <div>
             <label
@@ -51,7 +51,7 @@ export const AvailableRoomForm = (props: IAvalableRoomFormProps) => {
           <img
             alt="free economy rooms"
             className="w-10 mr-2"
-            src="/economy.png"
+            src="./economy.png"
           />
           <div>
             <label
