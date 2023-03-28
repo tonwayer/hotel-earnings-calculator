@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hotel-revenue-calculator/static/css/main.12fd13d3.css",
+    "main.js": "/hotel-revenue-calculator/static/js/main.80e53777.js",
+    "static/js/787.b27dbeb5.chunk.js": "/hotel-revenue-calculator/static/js/787.b27dbeb5.chunk.js",
+    "index.html": "/hotel-revenue-calculator/index.html",
+    "main.12fd13d3.css.map": "/hotel-revenue-calculator/static/css/main.12fd13d3.css.map",
+    "main.80e53777.js.map": "/hotel-revenue-calculator/static/js/main.80e53777.js.map",
+    "787.b27dbeb5.chunk.js.map": "/hotel-revenue-calculator/static/js/787.b27dbeb5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12fd13d3.css",
+    "static/js/main.80e53777.js"
+  ]
+}
