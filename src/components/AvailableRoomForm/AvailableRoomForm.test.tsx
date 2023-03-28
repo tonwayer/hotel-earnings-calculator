@@ -16,7 +16,7 @@ describe("AvailableRoomsForm", () => {
     screen.getByRole("heading", { name: "Available Rooms" });
     screen.getByLabelText("Premium Rooms");
     screen.getByLabelText("Economy Rooms");
-    screen.getByRole("button", { name: "Calculate Earnings" });
+    screen.getByRole("button", { name: "Calculate Revenue" });
   });
 
   it("updates value of inputs when user types", async () => {
@@ -34,7 +34,7 @@ describe("AvailableRoomsForm", () => {
       await typeIntoInput("Premium Rooms", "10");
       await typeIntoInput("Economy Rooms", "10");
     });
-    userEvent.click(screen.getByRole("button", { name: "Calculate Earnings" }));
+    userEvent.click(screen.getByRole("button", { name: "Calculate Revenue" }));
     await waitFor(() => {
       expect(mockedOnRoomStateSubmit).toHaveBeenCalledWith(10, 10);
     });
